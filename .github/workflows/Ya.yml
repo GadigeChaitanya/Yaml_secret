@@ -16,7 +16,7 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
-  build:
+  job1:
     # The type of runner that the job will run on
     runs-on: self-hosted
 
@@ -38,9 +38,15 @@ jobs:
         env: 
           Name_SECURE: ${{ secrets.NAME }}
           Password_SECURE: ${{ secrets.PASSWORD }}
-          
+
+  job2:
+    # The type of runner that the job will run on
+    runs-on: self-hosted
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:        
       - uses: actions/checkout@v3
-      - name: Test
+      - name: Test1
         run: |
       
           if [ "$Name1" == "md.rafi" ]
@@ -54,9 +60,15 @@ jobs:
         env: 
           Name1_SECURE: ${{ secrets.NAME1 }}
           Password1_SECURE: ${{ secrets.PASSWORD1 }}
-          
+
+  job3:
+    # The type of runner that the job will run on
+    runs-on: self-hosted
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:       
       - uses: actions/checkout@v3
-      - name: Test
+      - name: Test2
         run: |
       
           if [ "$Name2" == Nikhil" ]
@@ -70,9 +82,14 @@ jobs:
         env: 
           Name2_SECURE: ${{ secrets.NAME2}}
           Password2_SECURE: ${{ secrets.PASSWORD2 }}
-          
+  job4:
+    # The type of runner that the job will run on
+    runs-on: self-hosted
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:        
       - uses: actions/checkout@v3
-      - name: Test
+      - name: Test3
         run: |
       
           if [ "$Name3" == "Srishanth" ]
