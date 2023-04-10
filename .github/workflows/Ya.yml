@@ -71,7 +71,7 @@ jobs:
       - name: Test2
         run: |
       
-          if [ "$Name2" == Nikhil.sai" ]
+          if [ "$Name2" == "Nikhil.sai" ]
           then
             echo "Got secret"
           fi
