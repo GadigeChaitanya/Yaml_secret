@@ -18,7 +18,7 @@ jobs:
   # This workflow contains a single job called "build"
   job1:
     # The type of runner that the job will run on
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -41,7 +41,7 @@ jobs:
 
   job2:
     # The type of runner that the job will run on
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:        
@@ -63,7 +63,7 @@ jobs:
 
   job3:
     # The type of runner that the job will run on
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:       
@@ -84,7 +84,7 @@ jobs:
           Password2_SECURE: ${{ secrets.PASSWORD2 }}
   job4:
     # The type of runner that the job will run on
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:        
