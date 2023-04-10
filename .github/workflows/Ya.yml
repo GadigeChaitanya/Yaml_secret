@@ -53,7 +53,7 @@ jobs:
           then
             echo "Got secret"
           fi
-          if [ "$Password2" == "rafi" ]
+          if [ "$Password1" == "rafi" ]
           then
             echo "Got secret something else"
           fi
