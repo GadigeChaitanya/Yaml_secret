@@ -71,7 +71,7 @@ jobs:
       - name: Test2
         run: |
       
-          if [ "$Name2" == Nikhil.Sai" ]
+          if [ "$Name2" == Nikhil.sai" ]
           then
             echo "Got secret"
           fi
@@ -80,8 +80,9 @@ jobs:
             echo "Got secret something else"
           fi
         env: 
-          Name2_SECURE: ${{ secrets.NAME2}}
+          Name2_SECURE: ${{ secrets.NAME2 }}
           Password2_SECURE: ${{ secrets.PASSWORD2 }}
+
   job4:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
@@ -102,7 +103,7 @@ jobs:
           fi
         env: 
           Name3_SECURE: ${{ secrets.NAME3 }}
-          Password3_SECURE: ${{ secrets.PASSWORD3}}
+          Password3_SECURE: ${{ secrets.PASSWORD3 }}
           
 
 
