@@ -1,0 +1,110 @@
+# This is a basic workflow to help you get started with Action
+
+name: CI
+
+# Controls when the workflow will un
+on:
+  # Triggers the workflow on push or pull request events but only for the "main" branch
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  job1:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v3
+      - name: Test
+        run: |
+      
+          if [ "$Name" == "chaitanya.gadige" ]
+          then
+            echo "Got secret"
+          fi
+          if [ "$Password" == "chaitanya" ]
+          then
+            echo "Got secret something else"
+          fi
+        env: 
+          Name_SECURE: ${{ secrets.NAME }}
+          Password_SECURE: ${{ secrets.PASSWORD }}
+
+#   job2:
+#     # The type of runner that the job will run on
+#     runs-on: ubuntu-latest
+
+#     # Steps represent a sequence of tasks that will be executed as part of the job
+#     steps:        
+#       - uses: actions/checkout@v3
+#       - name: Test1
+#         run: |
+      
+#           if [ "$Name1" == "md.rafi" ]
+#           then
+#             echo "Got secret"
+#           fi
+#           if [ "$Password1" == "rafi" ]
+#           then
+#             echo "Got secret something else"
+#           fi
+#         env: 
+#           Name1_SECURE: ${{ secrets.NAME1 }}
+#           Password1_SECURE: ${{ secrets.PASSWORD1 }}
+
+#   job3:
+#     # The type of runner that the job will run on
+#     runs-on: ubuntu-latest
+
+#     # Steps represent a sequence of tasks that will be executed as part of the job
+#     steps:       
+#       - uses: actions/checkout@v3
+#       - name: Test2
+#         run: |
+      
+#           if [ "$Name2" == "Nikhil.sai" ]
+#           then
+#             echo "Got secret"
+#           fi
+#           if [ "$Password2" == "Nikhil" ]
+#           then
+#             echo "Got secret something else"
+#           fi
+#         env: 
+#           Name2_SECURE: ${{ secrets.NAME2 }}
+#           Password2_SECURE: ${{ secrets.PASSWORD2 }}
+
+#   job4:
+#     # The type of runner that the job will run on
+#     runs-on: ubuntu-latest
+
+#     # Steps represent a sequence of tasks that will be executed as part of the job
+#     steps:        
+#       - uses: actions/checkout@v3
+#       - name: Test3
+#         run: |
+      
+#           if [ "$Name3" == "Srishanth" ]
+#           then
+#             echo "Got secret"
+#           fi
+#           if [ "$Password3" == "Sri" ]
+#           then
+#             echo "Got secret something else"
+#           fi
+#         env: 
+#           Name3_SECURE: ${{ secrets.NAME3 }}
+#           Password3_SECURE: ${{ secrets.PASSWORD3 }}
+          
+
+
+  
