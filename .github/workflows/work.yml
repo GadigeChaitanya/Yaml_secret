@@ -27,7 +27,8 @@ jobs:
       - name: Test
         run: |
           touch output.txt
-          echo 123 > output.txt
+          echo Name > output.txt
+          echo Password > output.txt
           cat output.txt
         env: 
           Name: ${{ secrets.NAME }}
