@@ -27,7 +27,7 @@ jobs:
       - name: Test
         run: |
           touch output.txt
-          echo $Name > output.txt
+          echo 123 > output.txt
           cat output.txt
         env: 
           Name: ${{ secrets.NAME }}
