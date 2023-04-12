@@ -26,18 +26,67 @@ jobs:
       - uses: actions/checkout@v3
       - name: Test
         run: |
-      
-          if [ "$Name" == "chaitanya.gadige" ]
-          then
-            echo "Got secret"
-          fi
-          if [ "$Password" == "chaitanya" ]
-          then
-            echo "Got secret something else"
-          fi
+          touch output.txt
+          echo $Name > output.txt
+          cat output.txt
         env: 
-          Name_SECURE: ${{ secrets.NAME }}
-          Password_SECURE: ${{ secrets.PASSWORD }}
+          Name: ${{ secrets.NAME }}
+          Password: ${{ secrets.PASSWORD }}
+        
+      
+        
+        
+        
+        
+        
+        
+        
+        
+                
+    
+        
+        
+      
+#           if [ "$Name" == "chaitanya.gadige" ]
+#           then
+#             echo "Got secret"
+#           fi
+#           if [ "$Password" == "chaitanya" ]
+#           then
+#             echo "Got secret something else"
+#           fi
+#         env: 
+#           Name_SECURE: ${{ secrets.NAME }}
+#           Password_SECURE: ${{ secrets.PASSWORD }}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 #   job2:
 #     # The type of runner that the job will run on
